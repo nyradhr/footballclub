@@ -10,13 +10,14 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "TICKET")
-public class Ticket implements WithId<Long> {
+public class Ticket {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name = "ID")
     private Long id;
-    @Column(name = "GAME")
-    private Long gameId;
+    @ManyToOne
+    @JoinColumn(name = "GAME", referencedColumnName = "ID")
+    private Game game;
     @Column(name = "SEAT")
     private int seatNumber;
     @Column(name = "COST")
@@ -27,4 +28,5 @@ public class Ticket implements WithId<Long> {
     private String buyer;
     @Column(name = "RECIPIENT")
     private String recipient;
+
 }

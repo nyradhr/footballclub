@@ -13,8 +13,11 @@ import lombok.Setter;
 @NoArgsConstructor
 public class TicketDTO {
     private long id;
-    private long game;
-    private int seat;
+    private long gameId;
+    private String opposingTeam;
+    private String stadium;
+    private String date;
+    private Integer seat;
     private double ticketCost;
     private String type;
     private String buyer;

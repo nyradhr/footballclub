@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
 @Setter
@@ -14,7 +15,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Entity
 @Table(name = "GAME")
-public class Game implements WithId<Long> {
+public class Game {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name = "ID")
@@ -37,4 +38,8 @@ public class Game implements WithId<Long> {
     private double standCost;
     @Column(name = "CANCELED")
     private boolean canceled;
+
+    @OneToMany(mappedBy = "game")
+    private List<Ticket> tickets;
+
 }

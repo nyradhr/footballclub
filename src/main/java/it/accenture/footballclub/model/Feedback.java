@@ -12,7 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "FEEDBACK")
-public class Feedback implements WithId<Long> {
+public class Feedback {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name = "ID")
@@ -21,11 +21,11 @@ public class Feedback implements WithId<Long> {
     private String content;
     @Column(name = "AUTHOR")
     private String author;
-    @Column(name = "ANNOUNCEMENT")
-    private Long announcement;
+    @ManyToOne
+    @JoinColumn(name = "ANNOUNCEMENT", referencedColumnName = "ID")
+    private Announcement announcement;
     @Column(name = "SCORE")
     private int score;
     @Column(name = "REPLY_TO")
     private Long replyTo;
-
 }
