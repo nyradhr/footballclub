@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Profile("jpa")
 public interface GameRepository extends JpaRepository<Game, Long> {
+
+    public Iterable<Game> findByStartDateAndEndDate();
 }

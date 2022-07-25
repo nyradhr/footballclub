@@ -2,11 +2,12 @@ package it.accenture.footballclub.mapstruct;
 
 import it.accenture.footballclub.dto.GameDTO;
 
+import it.accenture.footballclub.model.Game;
 import org.mapstruct.factory.Mappers;
 
 public interface GameMapper {
     GameMapper INSTANCE = Mappers.getMapper(GameMapper.class);
-    GameDTO fromGame(GameMapper g);
-    GameMapper toFeedback (GameMapper gDTO);
+    GameDTO fromGame(Game g);
+    Game toFeedback (GameDTO gDTO);
 
 }
