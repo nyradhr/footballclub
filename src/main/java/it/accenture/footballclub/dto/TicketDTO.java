@@ -14,7 +14,7 @@ import lombok.Setter;
 public class TicketDTO {
     private long id;
     private long game;
-    private int seat;
+    private Integer seat;
     private double ticketCost;
     private String type;
     private String buyer;
