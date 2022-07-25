@@ -26,7 +26,7 @@ public class GameController {
     }
 
     @GetMapping
-    public ResponseEntity<Iterable<GameDTO>> getCourses(@RequestParam(required = false) LocalDate startDate,
+    public ResponseEntity<Iterable<GameDTO>> getGames(@RequestParam(required = false) LocalDate startDate,
                                                         @RequestParam(required = false) LocalDate endDate) {
         Iterable<Game> gameList = null;
         if(startDate != null && endDate != null) {
