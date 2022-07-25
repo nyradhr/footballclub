@@ -12,8 +12,7 @@ import org.mapstruct.factory.Mappers;
 public interface FeedbackMapper {
     FeedbackMapper INSTANCE = Mappers.getMapper(FeedbackMapper.class);
     @Mapping(target = "announcementId", source = "announcement.id")
-    FeedbackDTO fromAnnouncement (Feedback f);
-
-
-    Feedback toAnnouncement (Feedback fDTO);
+    FeedbackDTO fromFeedback (Feedback f);
+    @Mapping(target = "announcement.id", source = "announcementId")
+    Feedback toFeedback (Feedback fDTO);
 }
