@@ -10,7 +10,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "TICKET")
-public class Ticket {
+public class Ticket implements WithId<Long> {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name = "ID")
