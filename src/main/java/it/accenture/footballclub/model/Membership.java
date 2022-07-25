@@ -24,7 +24,7 @@ public class Membership {
     @Column(name = "END_DATE")
     private LocalDate endDate;
     @Column(name = "COST")
-    private int cost;
+    private double cost;
     @Column(name = "BUYER")
     private String buyer;
     @Column(name = "RECIPIENT")

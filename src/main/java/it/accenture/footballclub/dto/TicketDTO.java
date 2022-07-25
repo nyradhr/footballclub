@@ -15,7 +15,7 @@ public class TicketDTO {
     private long id;
     private long game;
     private int seat;
-    private double ticketCoast;
+    private double ticketCost;
     private String type;
     private String buyer;
     private String recipient;

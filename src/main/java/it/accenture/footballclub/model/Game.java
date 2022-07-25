@@ -32,9 +32,9 @@ public class Game {
     @Column(name = "SOLD_TICKETS")
     private int soldTickets;
     @Column(name = "GALLERY_COST")
-    private int galleryCost;
+    private double galleryCost;
     @Column(name = "STAND_COST")
-    private int standCost;
+    private double standCost;
     @Column(name = "CANCELED")
     private boolean canceled;
 }

@@ -16,5 +16,5 @@ public class FeedbackDTO {
     private long announcement;
     private String author;
     private String content;
-    private long replyTO;
+    private long replyTo;
 }

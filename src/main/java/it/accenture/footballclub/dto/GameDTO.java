@@ -18,7 +18,7 @@ public class GameDTO {
     private int galleryTickets;
     private int standTickets;
     private int soldTickets;
-    private double galleryCoast;
-    private double standCoast;
+    private double galleryCost;
+    private double standCost;
     private boolean cancelled;
 }

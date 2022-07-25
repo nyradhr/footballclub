@@ -20,7 +20,7 @@ public class Ticket {
     @Column(name = "SEAT")
     private int seatNumber;
     @Column(name = "COST")
-    private int cost;
+    private double cost;
     @Column(name = "TYPE")
     private String type;
     @Column(name = "BUYER")
