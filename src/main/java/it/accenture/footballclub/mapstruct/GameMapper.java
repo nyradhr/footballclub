@@ -8,6 +8,6 @@ import org.mapstruct.factory.Mappers;
 public interface GameMapper {
     GameMapper INSTANCE = Mappers.getMapper(GameMapper.class);
     GameDTO fromGame(Game g);
-    Game toFeedback (GameDTO gDTO);
+    Game toGame(GameDTO gDTO);
 
 }

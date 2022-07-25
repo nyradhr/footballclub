@@ -13,7 +13,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class FeedbackDTO {
     private long id;
-    private Long announcement;
+    private long announcement;
     private String author;
     private String content;
     private Long replyTo;

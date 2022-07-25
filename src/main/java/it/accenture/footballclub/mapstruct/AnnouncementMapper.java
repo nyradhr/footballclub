@@ -9,6 +9,6 @@ import org.mapstruct.factory.Mappers;
 
 public interface AnnouncementMapper {
     AnnouncementMapper INSTANCE = Mappers.getMapper(AnnouncementMapper.class);
-    AnnouncementDTO fromAnnouncement (Announcement c);
-    Announcement toAnnouncement (Announcement aDTO);
+    AnnouncementDTO fromAnnouncement(Announcement c);
+    Announcement toAnnouncement(AnnouncementDTO aDTO);
 }

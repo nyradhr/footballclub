@@ -17,5 +17,5 @@ public class MembershipDTO {
     private String endDate;
     private String buyer;
     private String recipient;
-    private double membershipCost;
+    private double cost;
 }
