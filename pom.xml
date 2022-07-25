@@ -61,8 +61,8 @@
 						</exclude>
 					</excludes>
 				</configuration>
+				<version>${project.parent.version}</version>
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
