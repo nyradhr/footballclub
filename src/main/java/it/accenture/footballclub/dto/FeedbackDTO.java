@@ -13,8 +13,8 @@ import lombok.Setter;
 @NoArgsConstructor
 public class FeedbackDTO {
     private long id;
-    private long announcement;
+    private Long announcement;
     private String author;
     private String content;
-    private long replyTo;
+    private Long replyTo;
 }
