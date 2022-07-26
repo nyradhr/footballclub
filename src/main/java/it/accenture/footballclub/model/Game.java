@@ -45,8 +45,4 @@ public class Game implements WithId<Long> {
     @Column(name = "CANCELED")
     private boolean cancelled;
 
-
-    @OneToMany(mappedBy = "game")
-    private List<Ticket> tickets;
-
 }
