@@ -27,22 +27,15 @@ public class GameController {
 
     @GetMapping
     public ResponseEntity<Iterable<GameDTO>> getGames(@RequestParam(required = false) LocalDate startDate,
-                                                        @RequestParam(required = false) LocalDate endDate) {
+                                                      @RequestParam(required = false) LocalDate endDate) {
         Iterable<Game> gameList = null;
         if(startDate != null && endDate != null) {
-            gameList = gameService.findByStartDateAndEndDate();
+            gameList = gameService.findByDateBetween(startDate, endDate);
         } else {
             gameList = gameService.getAll();
         }
         var GameDtos = StreamSupport.stream(gameList.spliterator(), false).map(GameMapper.INSTANCE::fromGame).toList();
         return ResponseEntity.ok(GameDtos);
     }
-
-
-
-
-
-
-
 
 }
