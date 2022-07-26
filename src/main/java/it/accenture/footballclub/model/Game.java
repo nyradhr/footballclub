@@ -43,7 +43,7 @@ public class Game implements WithId<Long> {
     @Column(name = "OPPOSING_SCORE")
     private int opposingScore;
     @Column(name = "CANCELED")
-    private boolean canceled;
+    private boolean cancelled;
 
 
     @OneToMany(mappedBy = "game")
