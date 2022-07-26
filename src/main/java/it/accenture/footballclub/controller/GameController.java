@@ -4,7 +4,6 @@ package it.accenture.footballclub.controller;
 import it.accenture.footballclub.dto.GameDTO;
 import it.accenture.footballclub.mapstruct.GameMapper;
 import it.accenture.footballclub.model.Game;
-import it.accenture.footballclub.service.CrudService;
 import it.accenture.footballclub.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +13,7 @@ import java.time.LocalDate;
 import java.util.stream.StreamSupport;
 
 @RestController
-@CrossOrigin
+//@CrossOrigin
 @RequestMapping("game")
 public class GameController {
 
@@ -30,7 +29,7 @@ public class GameController {
                                                       @RequestParam(required = false) LocalDate endDate) {
         Iterable<Game> gameList = null;
         if(startDate != null && endDate != null) {
-            gameList = gameService.findByDateBetween(startDate, endDate);
+            gameList = gameService.findByGameDateBetween(startDate, endDate);
         } else {
             gameList = gameService.getAll();
         }

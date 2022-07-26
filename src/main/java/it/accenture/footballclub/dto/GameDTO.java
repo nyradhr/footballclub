@@ -14,7 +14,7 @@ public class GameDTO {
     private long id;
     private String opposingTeam;
     private String stadium;
-    private String date;
+    private String gameDate;
     private int galleryTickets;
     private int standTickets;
     private int soldStandTickets;

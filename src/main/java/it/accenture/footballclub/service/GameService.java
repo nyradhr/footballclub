@@ -2,17 +2,19 @@ package it.accenture.footballclub.service;
 
 import it.accenture.footballclub.model.Game;
 import it.accenture.footballclub.repository.GameRepository;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 
+@Service
 public class GameService extends CrudService<Game, Long, GameRepository>{
 
     public GameService(GameRepository repo) {
         super(repo, Game.class);
     }
 
-    public Iterable<Game> findByDateBetween(LocalDate startDate, LocalDate endDate) {
-        return repo.findByDateBetween(startDate, endDate);
+    public Iterable<Game> findByGameDateBetween(LocalDate startDate, LocalDate endDate) {
+        return repo.findByGameDateBetween(startDate, endDate);
 
     }
 }

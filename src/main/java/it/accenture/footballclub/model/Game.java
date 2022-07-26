@@ -24,8 +24,8 @@ public class Game implements WithId<Long> {
     private String opposingTeam;
     @Column(name = "STADIUM")
     private String stadium;
-    @Column(name = "DATE")
-    private LocalDate date;
+    @Column(name = "GAME_DATE")
+    private LocalDate gameDate;
     @Column(name = "GALLERY_TICKETS")
     private int galleryTickets;
     @Column(name = "STAND_TICKETS")
