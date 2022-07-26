@@ -30,14 +30,21 @@ public class Game implements WithId<Long> {
     private int galleryTickets;
     @Column(name = "STAND_TICKETS")
     private int standTickets;
-    @Column(name = "SOLD_TICKETS")
-    private int soldTickets;
+    @Column(name = "SOLD_STAND_TICKETS")
+    private int soldStandTickets;
+    @Column(name = "SOLD_GALLERY_TICKETS")
+    private int soldGalleryTickets;
     @Column(name = "GALLERY_COST")
     private double galleryCost;
     @Column(name = "STAND_COST")
     private double standCost;
+    @Column(name = "OUR_SCORE")
+    private int ourScore;
+    @Column(name = "OPPOSING_SCORE")
+    private int opposingScore;
     @Column(name = "CANCELED")
     private boolean canceled;
+
 
     @OneToMany(mappedBy = "game")
     private List<Ticket> tickets;

@@ -17,8 +17,11 @@ public class GameDTO {
     private String date;
     private int galleryTickets;
     private int standTickets;
-    private int soldTickets;
+    private int soldStandTickets;
+    private int soldGalleryTickets;
     private double galleryCost;
     private double standCost;
     private boolean cancelled;
+    private Integer ourScore;
+    private Integer opposingScore;
 }
