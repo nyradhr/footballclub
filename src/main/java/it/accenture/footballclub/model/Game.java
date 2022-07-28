@@ -39,9 +39,9 @@ public class Game implements WithId<Long> {
     @Column(name = "STAND_COST")
     private double standCost;
     @Column(name = "OUR_SCORE")
-    private int ourScore;
+    private Integer ourScore;
     @Column(name = "OPPOSING_SCORE")
-    private int opposingScore;
+    private Integer opposingScore;
     @Column(name = "CANCELED")
     private boolean cancelled;
 

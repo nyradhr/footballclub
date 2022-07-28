@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Profile("jpa")
 public interface TicketRepository extends JpaRepository<Ticket, Long> {
-
+ public Iterable<Ticket> findByRecipient(String recipient);
 }
