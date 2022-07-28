@@ -16,8 +16,8 @@ public class TicketDTO {
     private long gameId;
     private String opposingTeam;
     private String stadium;
-    private String date;
-    private Integer seat;
+    private String gameDate;
+    private Integer seatNumber;
     private double ticketCost;
     private String type;
     private String buyer;

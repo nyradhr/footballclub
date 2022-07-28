@@ -16,5 +16,7 @@ public class FeedbackDTO {
     private long announcement;
     private String author;
     private String content;
+    private int score;
     private Long replyTo;
+
 }

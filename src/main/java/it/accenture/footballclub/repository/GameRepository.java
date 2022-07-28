@@ -11,5 +11,5 @@ import java.time.LocalDate;
 @Profile("jpa")
 public interface GameRepository extends JpaRepository<Game, Long> {
 
-    public Iterable<Game> findByDateBetween(LocalDate startDate, LocalDate endDate);
+    public Iterable<Game> findByGameDateBetween(LocalDate startDate, LocalDate endDate);
 }
