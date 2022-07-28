@@ -16,4 +16,5 @@ public class AnnouncementDTO {
     private String content;
     private String imgAddress;
     private int score;
+    private String title;
 }

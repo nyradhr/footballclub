@@ -24,6 +24,8 @@ public class Announcement implements WithId<Long> {
     private int imgAddress;
     @Column(name = "SCORE")
     private int score;
+    @Column(name = "TITLE")
+    private String title;
 
     @OneToMany(mappedBy = "announcement")
     private List<Feedback> feedback;
