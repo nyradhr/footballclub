@@ -4,6 +4,7 @@ package it.accenture.footballclub.controller;
 import it.accenture.footballclub.dto.GameDTO;
 import it.accenture.footballclub.mapstruct.GameMapper;
 import it.accenture.footballclub.model.Game;
+import it.accenture.footballclub.service.AbstractGameService;
 import it.accenture.footballclub.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,14 +15,14 @@ import java.time.format.DateTimeParseException;
 import java.util.stream.StreamSupport;
 
 @RestController
-//@CrossOrigin
+@CrossOrigin
 @RequestMapping("game")
 public class GameController {
 
-    private GameService gameService;
+    private AbstractGameService gameService;
 
     @Autowired
-    public GameController(GameService gameService) {
+    public GameController(AbstractGameService gameService) {
         this.gameService = gameService;
     }
 

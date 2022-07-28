@@ -13,8 +13,9 @@ import lombok.Setter;
 @NoArgsConstructor
 public class AnnouncementDTO {
     private long id;
+    private String title;
     private String content;
     private String imgAddress;
     private int score;
-    private String title;
+
 }

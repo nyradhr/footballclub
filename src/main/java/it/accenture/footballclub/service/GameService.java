@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 
 @Service
-public class GameService extends CrudService<Game, Long, GameRepository>{
+public class GameService extends CrudService<Game, Long, GameRepository> implements AbstractGameService{
 
     public GameService(GameRepository repo) {
         super(repo, Game.class);
@@ -15,6 +15,5 @@ public class GameService extends CrudService<Game, Long, GameRepository>{
 
     public Iterable<Game> findByGameDateBetween(LocalDate startDate, LocalDate endDate) {
         return repo.findByGameDateBetween(startDate, endDate);
-
     }
 }
