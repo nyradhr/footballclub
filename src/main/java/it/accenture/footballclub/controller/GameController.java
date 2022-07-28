@@ -16,7 +16,7 @@ import java.util.stream.StreamSupport;
 
 @RestController
 @CrossOrigin
-@RequestMapping("game")
+@RequestMapping("games")
 public class GameController {
 
     private AbstractGameService gameService;
