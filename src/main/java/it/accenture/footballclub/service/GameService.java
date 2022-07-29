@@ -16,4 +16,9 @@ public class GameService extends CrudService<Game, Long, GameRepository> impleme
     public Iterable<Game> findByGameDateBetween(LocalDate startDate, LocalDate endDate) {
         return repo.findByGameDateBetween(startDate, endDate);
     }
+
+    /*public Iterable<Game> findByGameDate(LocalDate date) {
+        System.out.println(date);
+        return repo.findByGameDate(date);
+    }*/
 }

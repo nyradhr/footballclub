@@ -4,7 +4,9 @@ import it.accenture.footballclub.model.Announcement;
 import it.accenture.footballclub.model.Feedback;
 import it.accenture.footballclub.repository.AnnouncementRepository;
 import it.accenture.footballclub.repository.FeedbackRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class FeedbackService extends CrudService<Feedback, Long, FeedbackRepository> implements AbstractFeedbackService{
     public FeedbackService(FeedbackRepository repo) {
         super(repo, Feedback.class);
