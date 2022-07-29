@@ -31,7 +31,8 @@ public class GameController {
 
     @GetMapping
     public ResponseEntity<?> getGames(@RequestParam(required = false) String startDate,
-                                                      @RequestParam(required = false) String endDate) {
+                                      @RequestParam(required = false) String endDate,
+                                      @RequestParam(required = false) Boolean future) {
         Iterable<Game> gameList = null;
         try {
             if (startDate != null && endDate != null) {
@@ -42,7 +43,11 @@ public class GameController {
             } else if(startDate == null && endDate != null) {
                 LocalDate ed = LocalDate.parse(endDate);
                 gameList = gameService.findByGameDateBetween(ed, ed.plusDays(1));
-            } else {
+            } else if(future == true){
+                LocalDate sd = LocalDate.parse(startDate);
+                gameList = gameService.findByGameDateBetween(sd, sd.plusMonths(1));
+            }else
+            {
                 gameList = gameService.getAll();
             }
             var GameDtos = StreamSupport.stream(gameList.spliterator(), false).map(GameMapper.INSTANCE::fromGame).toList();
@@ -62,5 +67,4 @@ public class GameController {
             return ResponseEntity.notFound().build();
         }
     }
-
 }
