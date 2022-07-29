@@ -23,9 +23,14 @@ public class TicketController {
     }
 
     @GetMapping
-    public ResponseEntity<?> getTickets() {
+    public ResponseEntity<?> getTickets(@RequestParam(required = false) String recipient) {
         Iterable<Ticket> ticketList = null;
-        ticketList = ticketService.getAll();
+        if(recipient != null) {
+            //strings saved in db are all uppercase
+            ticketList = ticketService.findByRecipient(recipient.toUpperCase());
+        } else {
+            ticketList = ticketService.getAll();
+        }
         var ticketDtos = StreamSupport.stream(ticketList.spliterator(), false).map(TicketMapper.INSTANCE::fromTicket).toList();
         return ResponseEntity.ok(ticketDtos);
     }

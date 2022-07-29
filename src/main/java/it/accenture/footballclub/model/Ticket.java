@@ -19,7 +19,7 @@ public class Ticket implements WithId<Long> {
     @JoinColumn(name = "GAME", referencedColumnName = "ID")
     private Game game;
     @Column(name = "SEAT")
-    private int seatNumber;
+    private Integer seatNumber;
     @Column(name = "COST")
     private double cost;
     @Column(name = "TYPE")

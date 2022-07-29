@@ -34,7 +34,6 @@ public class GameController {
                                                       @RequestParam(required = false) String endDate) {
         Iterable<Game> gameList = null;
         try {
-
             if (startDate != null && endDate != null) {
                 gameList = gameService.findByGameDateBetween(LocalDate.parse(startDate), LocalDate.parse(endDate));
             } else if(startDate != null && endDate == null) {
